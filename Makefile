@@ -1,18 +1,18 @@
-cc = clang
-cflags = -Wall -Wextra -Iinclude 
-ldflags = -Llib -lraylib
-srcs = main.c
-target = program
+CC = clang
+CFLAGS = -Wall -Wextra -Iinclude 
+LDFLAGS = -Llib -lraylib
+SRCS = main.c include/*.c
+TARGET = program
 
 default: build run
 
 build:
-	$(cc) -o $(target) $(cflags) $(ldflags) $(srcs)
+	$(CC) -o $(TARGET) $(LDFLAGS) $(SRCS) $(CFLAGS)
 
 run:
-	./$(target)
+	./$(TARGET)
 
 clean:
-	rm -rf $(target)
+	rm -rf $(TARGET)
 
 

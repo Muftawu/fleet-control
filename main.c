@@ -1,5 +1,5 @@
 #include "raylib.h"
-#include <stdio.h>
+#include "include/utils.h"
 
 #define win_width 1440
 #define win_height 960 
@@ -13,7 +13,10 @@ int main(void) {
   while (!WindowShouldClose()) {
     BeginDrawing();
 
-    DrawCircle(10, 10, 50, RAYWHITE);
+       putText("top left", "topLeft", 1, 1);
+       putText("top right", "topRight", 5, 1);
+       putText("bottom left", "bottomLeft", 1, 2);
+       putText("bottom right", "bottomRight", 7, 2);
 
     EndDrawing();
   }
